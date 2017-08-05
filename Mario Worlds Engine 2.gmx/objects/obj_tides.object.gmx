@@ -49,7 +49,7 @@ alarm[0] = 360;
 alarm[1] = 7;
 
 //Create a water surface
-water = instance_create(x,y+4,obj_swim);
+water = instance_create(x,y,obj_swim);
 with (water) {
 
     image_xscale = room_width/16;

@@ -122,7 +122,8 @@ image_index = 1;
             <string>///Ride Yoshi
 
 //If Mario jumps on the Yoshi
-if (other.vspeed &gt; 0)
+if (other.state = cs_state_jump)
+&amp;&amp; (other.vspeed &gt; 0)
 &amp;&amp; (other.holding = 0)
 &amp;&amp; (other.visible = 1) {
 

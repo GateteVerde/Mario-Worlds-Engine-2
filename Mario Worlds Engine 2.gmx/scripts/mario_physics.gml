@@ -103,13 +103,6 @@ if (vspeed < 0) {
                 }
             }
         }
-    
-        //Prevent Mario's head from getting embed in the ceiling.
-        if ((state >= cs_state_jump) || (statedelay > 0)) {
-        
-            while (collision_rectangle(bbox_left,bbox_top-1,bbox_right,bbox_top,obj_solid,1,0))
-                y++;
-        }
         
         //Stop vertical movement
         vspeed = 0;
@@ -125,6 +118,15 @@ if (vspeed < 0) {
                 audio_play_sound(snd_bump, 0, false);
         }
     }
+}
+
+//Prevent Mario's head from getting embed in the ceiling.
+if ((state == cs_state_jump) || (statedelay > 0)) {
+
+    ceiling = collision_rectangle(bbox_left,bbox_top-1,bbox_right,bbox_top,obj_solid,1,0);
+    if (ceiling)
+    && (ceiling.sprite_index != spr_square)
+        y++;
 }
 
 //If Mario is not climbing.

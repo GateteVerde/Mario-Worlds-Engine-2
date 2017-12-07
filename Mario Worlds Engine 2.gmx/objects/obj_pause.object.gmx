@@ -79,7 +79,7 @@ instance_activate_object(obj_persistent);
 
 //Set the shader
 shader_set(shd_gaussian);
-shader_set_uniform_f(usize, view_wview[0], view_hview[0], 8) //width,height,radius
+shader_set_uniform_f(usize, view_wview[0], view_hview[0], 4) //width,height,radius
 
 //Set the colour
 draw_set_colour(c_white);

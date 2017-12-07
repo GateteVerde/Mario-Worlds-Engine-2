@@ -101,8 +101,19 @@ if (platform.passenger) {
         }
         
         //Otherwise, turn below origin.
-        else 
-            dirspd += 0.015;
+        else {
+        
+            //If speed is greater or equal to 0.
+            if (dirspd &gt;= 0) {
+            
+                direct = 1;
+                dirspd += 0.015;
+            }
+            
+            //Otherwise, speed it up.
+            else if (direct == -1)
+                dirspd += 0.0075;
+        }
     }
     
     //Counter Clockwise
@@ -124,8 +135,19 @@ if (platform.passenger) {
         }
         
         //Otherwise, turn below origin.
-        else 
-            dirspd -= 0.015;
+        else {
+        
+            //If speed is lower or equal to 0.
+            if (dirspd &lt;= 0) {
+            
+                direct = -1;
+                dirspd -= 0.015;
+            }
+            
+            //Otherwise, speed it up.
+            else if (direct == 1)
+                dirspd -= 0.0075;
+        }
     }
     
     //Turn smooth
@@ -153,19 +175,19 @@ else { //if there is NOT a passenger on the platform, slow down turning
     if (abs(dirspd) &gt; 4.375)
         dirspd /= 2.1875;
 
-    //Set position
-    if ((direction &lt; 90) &amp;&amp; (direction &gt; 270))
-        direct = 1 //right side
-    else
-        direct = -1 //left side
-
     //less the 360 degree turn limit if it's low
     if (platform.y &gt; self.y+8)
         over_y = 1;
 }
 
 //Direction.
-direction += dirspd
+direction += dirspd;
+
+//Set position
+if ((direction &lt; 90) &amp;&amp; (direction &gt; 270))
+    direct = 1;
+else
+    direct = -1;
 
 //Return to default.
 if (bbox_right &lt; view_xview[0] - 160)

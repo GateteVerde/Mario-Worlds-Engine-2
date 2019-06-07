@@ -498,6 +498,12 @@
             <sprite>sprites\spr_skewer_side</sprite>
           </sprites>
         </sprites>
+        <sprites name="Pipes">
+          <sprite>sprites\spr_corner_ur</sprite>
+          <sprite>sprites\spr_corner_ul</sprite>
+          <sprite>sprites\spr_corner_dr</sprite>
+          <sprite>sprites\spr_corner_dl</sprite>
+        </sprites>
         <sprite>sprites\spr_pswitch</sprite>
         <sprite>sprites\spr_gswitch</sprite>
         <sprite>sprites\spr_onewaygate_up</sprite>
@@ -632,8 +638,6 @@
         <sprite>sprites\spr_hud_score</sprite>
         <sprite>sprites\spr_hud_heart</sprite>
         <sprite>sprites\spr_hud_pmeter</sprite>
-        <sprite>sprites\spr_hud_greenstars</sprite>
-        <sprite>sprites\spr_hud_greenstars_b</sprite>
       </sprites>
       <sprites name="Palettes">
         <sprite>sprites\spr_palette_kamikaze</sprite>
@@ -1100,6 +1104,12 @@
           <object>objects\obj_skewer_up</object>
           <object>objects\obj_skewer_left</object>
           <object>objects\obj_skewer_right</object>
+        </objects>
+        <objects name="Pipes">
+          <object>objects\obj_pipecorner_ur</object>
+          <object>objects\obj_pipecorner_ul</object>
+          <object>objects\obj_pipecorner_dr</object>
+          <object>objects\obj_pipecorner_dl</object>
         </objects>
         <object>objects\obj_pswitch</object>
         <object>objects\obj_gswitch</object>

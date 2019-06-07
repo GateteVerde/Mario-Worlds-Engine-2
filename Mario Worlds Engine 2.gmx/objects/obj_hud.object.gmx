@@ -200,9 +200,6 @@ if (global.healthmode) {
     }
 }
 
-//Green Stars
-draw_sprite_ext(spr_hud_greenstars,-1,view_xview[0]+8,view_yview[0]+52,1,1,0,c_white,1);
-
 //Reserve Box
 draw_sprite_ext(spr_reservebottom,0,view_xview[0]+177,view_yview[0]+8,1,1,0,c_white,1);
 

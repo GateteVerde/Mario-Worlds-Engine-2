@@ -117,7 +117,7 @@ hspeed = 0;
 //Snap in grid
 move_snap(16,16);
 
-//Go down
+//Go right
 alarm[2] = 60;
 </string>
           </argument>
@@ -142,7 +142,6 @@ alarm[2] = 60;
           <argument>
             <kind>1</kind>
             <string>///Go left a bit
-
 
 //If this object is outside the view, deny event.
 if (outside_view()) {
@@ -188,9 +187,7 @@ if (ready == 0) {
 
     //When moving right
     if (hspeed &gt;= 0) {
-    
         
-    
         //Handle wall collisions
         if (wall)
         &amp;&amp; (bbox_right &lt; wall.xprevious+5)
